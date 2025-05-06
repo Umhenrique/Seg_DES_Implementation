@@ -31,6 +31,8 @@ pip install -r requirements.txt
 1. Inicie o servidor Flask:
 ```bash
 python app.py
+ou
+py app.py
 ```
 
 2. Abra seu navegador e acesse:
