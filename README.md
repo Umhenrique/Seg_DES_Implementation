@@ -53,8 +53,8 @@ pytest test_des.py -v
 ## Características
 
 - Implementação completa do algoritmo DES
-- Interface web amigável
-- Suporte a mensagens de qualquer tamanho
+- Interface web Poggers
+- Suporte a mensagens de qualquer tamanho (nao testei o maximo na verdade)
 - Validação de entrada
 - Tratamento de erros
 - Testes unitários abrangentes
