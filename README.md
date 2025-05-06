@@ -15,8 +15,8 @@ Este projeto implementa o algoritmo de criptografia DES (Data Encryption Standar
 
 1. Clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
-cd [NOME_DO_DIRETÓRIO]
+git clone [[URL_DO_REPOSITÓRIO]](https://github.com/Umhenrique/Seg_DES_Implementation)
+cd [[NOME_DO_DIRETÓRIO]](https://github.com/Umhenrique/Seg_DES_Implementation)
 ```
 
 2. Instale as dependências:
