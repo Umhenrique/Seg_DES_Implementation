@@ -44,23 +44,6 @@ http://localhost:5000
    - Criptografar texto usando uma chave hexadecimal de 16 caracteres
    - Descriptografar texto cifrado usando a mesma chave
 
-### Uso via Python
-
-```python
-from des import DES
-
-# Criar uma instância do DES com uma chave
-chave = "133457799BBCDFF1"  # 16 caracteres hexadecimais
-des = DES(chave)
-
-# Criptografar texto
-texto_plano = "Olá, mundo!"
-texto_cifrado = des.encrypt(texto_plano.encode('utf-8'))
-
-# Descriptografar texto
-texto_original = des.decrypt(texto_cifrado)
-```
-
 ## Testes
 
 Execute os testes unitários:
