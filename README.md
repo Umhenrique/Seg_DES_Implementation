@@ -60,10 +60,6 @@ pytest test_des.py -v
 - Tratamento de erros
 - Testes unitários abrangentes
 
-## Limitações
-
-Esta implementação é principalmente para fins educacionais. O DES é considerado inseguro para uso em produção devido ao seu tamanho de chave pequeno (56 bits). Para aplicações reais, considere usar algoritmos mais modernos como AES.
-
 ## Estrutura do Projeto
 
 ```
@@ -77,10 +73,7 @@ Esta implementação é principalmente para fins educacionais. O DES é consider
 └── README.md         # Este arquivo
 ```
 
-## Contribuindo
-
-Contribuições são bem-vindas! Por favor, sinta-se à vontade para enviar um Pull Request.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes. 
+No começo, Deus fez o homem
+E o homem acha que fez Deus
+E no fim, Deus foi morto pelo homem
+E o homem agora quer ser Deus
