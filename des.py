@@ -1,5 +1,6 @@
 import numpy as np
 from bitarray import bitarray
+import base64
 
 class DES:
     IP = [
@@ -186,9 +187,15 @@ class DES:
         bits = bitarray()
         bits.frombytes(plaintext)
         
-        padding_length = (64 - (len(bits) % 64)) % 64
-        if padding_length > 0:
-            bits.extend([0] * padding_length)
+        # Only apply padding if the input is not exactly 8 bytes
+        if len(plaintext) % 8 != 0:
+            pad_len = 8 - (len(plaintext) % 8)
+            padded = plaintext + bytes([pad_len] * pad_len)
+            bits = bitarray()
+            bits.frombytes(padded)
+        else:
+            bits = bitarray()
+            bits.frombytes(plaintext)
 
         result = bitarray()
         for i in range(0, len(bits), 64):
@@ -210,4 +217,15 @@ class DES:
             block = bits[i:i+64]
             result.extend(self._process_block(block, encrypt=False))
 
-        return result.tobytes() 
+        decrypted = result.tobytes()
+        
+        # Only remove padding if the decrypted text is longer than 8 bytes
+        if len(decrypted) > 8:
+            pad_len = decrypted[-1]
+            return decrypted[:-pad_len]
+        return decrypted
+
+key = "fc30be03ed8df551"  # sua chave em hexadecimal
+des = DES(key)
+ciphertext = des.encrypt("lhama e alpaca")
+print(base64.b64encode(ciphertext).decode()) 
